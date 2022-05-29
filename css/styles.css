@@ -205,6 +205,7 @@ img {
 .contact-icon {
   margin-right: 10px;
   fill: var(--text-benef-tel-filter-col);
+  transition: fill 250ms var(--timing-function);
 }
 
 .header-mail:hover .contact-icon,
@@ -212,6 +213,7 @@ img {
 .header-tel:hover .contact-icon,
 .header-tel:focus .contact-icon {
   fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* ------------------------------footer style------------------------------ */
@@ -331,7 +333,7 @@ img {
 /* footer send form */
 
 .footer-form-box {
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 .footer-form-title {
@@ -374,6 +376,8 @@ img {
   padding-left: 16px;
   margin-right: 12px;
   outline: none;
+
+  transition: border-color 250ms var(--timing-function);
 }
 
 .footer-input::placeholder {
@@ -384,6 +388,11 @@ img {
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-input:hover,
+.footer-input:focus {
+  border-color: var(--accent-color);
 }
 
 .footer-sendbtn {
@@ -409,6 +418,13 @@ img {
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: var(--white-txt-color);
+
+  transition: background-color 250ms var(--timing-function);
+}
+
+.footer-sendbtn:hover,
+.footer-sendbtn:focus {
+  background-color: var(--ind-hero-btn-hover-bcg-col);
 }
 
 .footer-sendbtn-txt {
@@ -485,7 +501,6 @@ img {
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--ind-hero-btn-hover-bcg-col);
-  animation: btn-animation 250ms var(--timing-function);
 }
 
 @keyframes btn-animation {
@@ -620,10 +635,15 @@ img {
 .form-group {
   display: block;
   position: relative;
+  margin-bottom: 10px;
 }
 
-.form-group:not(:last-child) {
-  margin-bottom: 10px;
+/* .form-group:last-child {
+  margin-bottom: 20px;
+} */
+
+.form-group-coment {
+  margin-bottom: 20px;
 }
 
 .form-icon {
@@ -659,7 +679,10 @@ img {
 
 .form-input:focus + .form-icon,
 .form-input:focus,
-.clients-comment:focus {
+.clients-comment:focus,
+.form-input:hover + .form-icon,
+.form-input:hover,
+.clients-comment:hover {
   border-color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -692,7 +715,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
   margin-bottom: 30px;
 }
 
@@ -721,6 +743,20 @@ img {
   border-radius: 2px;
   margin-right: 7px;
   transition: background-color 250ms var(--timing-function);
+  transition: outline-color 250ms var(--timing-function);
+}
+
+/* .custom-checkbox:hover,
+.custom-checkbox:focus {
+  outline-color: var(--accent-color);
+} */
+
+.form-policy-group:hover .custom-checkbox,
+.form-policy-group:focus .custom-checkbox,
+.form-policy-group:hover .form-policy-dscr,
+.form-policy-group:focus .form-policy-dscr {
+  color: var(--accent-color);
+  outline-color: var(--accent-color);
 }
 
 .custom-checkbox-icon {
@@ -736,7 +772,14 @@ img {
   letter-spacing: 0.03em;
 
   color: #757575;
+
+  transition: color 250ms var(--timing-function);
 }
+
+/* .form-policy-dscr:focus,
+.form-policy-dscr:hover {
+  color: var(--accent-color);
+} */
 
 .form-policy-link {
   font-weight: 400;
@@ -774,13 +817,16 @@ img {
 }
 
 .submit-btn {
+  width: 200px;
+  height: 50px;
+
   margin-right: auto;
   margin-left: auto;
 
   padding-top: 10px;
-  padding-right: 32px;
+  padding-right: 55px;
   padding-bottom: 10px;
-  padding-left: 32px;
+  padding-left: 55px;
 
   font-family: 'Roboto', sans-serif;
   font-weight: 700;

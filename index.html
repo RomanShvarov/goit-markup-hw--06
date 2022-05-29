@@ -76,30 +76,30 @@
                   <use href="./images/sprite.svg#icon-close-btn"></use>
                 </svg>
               </button>
-              <strong class="modal-form-title">Оставьте свои данные, мы вам перезвоним</strong>
               <form class="modal-form">
+                <strong class="modal-form-title">Оставьте свои данные, мы вам перезвоним</strong>
                 <label class="form-group">
                   <span class="form-input-title">Имя</span>
-                  <input class="form-input" type="text" name="user-name" />
+                  <input class="form-input" type="text" name="user-name" required />
                   <svg class="form-icon" width="18" height="18">
                     <use href="./images/sprite2.svg#icon-form-name"></use>
                   </svg>
                 </label>
                 <label class="form-group">
                   <span class="form-input-title">Телефон</span>
-                  <input class="form-input" type="tel" name="user-phone" />
+                  <input class="form-input" type="tel" name="user-phone" required />
                   <svg class="form-icon" width="18" height="18">
                     <use href="./images/sprite2.svg#icon-form-phone"></use>
                   </svg>
                 </label>
                 <label class="form-group">
                   <span class="form-input-title">Почта</span>
-                  <input class="form-input" type="email" name="user-mail" />
+                  <input class="form-input" type="email" name="user-mail" required />
                   <svg class="form-icon" width="18" height="18">
                     <use href="./images/sprite2.svg#icon-form-mail"></use>
                   </svg>
                 </label>
-                <label class="form-group">
+                <label class="form-group form-group-coment">
                   <span class="form-input-title">Комментарий</span>
                   <textarea
                     class="clients-comment"
@@ -109,7 +109,7 @@
                   ></textarea>
                 </label>
                 <label class="form-policy-group">
-                  <input class="checkbox visually-hidden" type="checkbox" />
+                  <input class="checkbox visually-hidden" type="checkbox" required />
                   <span class="custom-checkbox">
                     <svg class="custom-checkbox-icon" width="16" height="15">
                       <use href="./images/sprite2.svg#icon-check"></use>
@@ -613,7 +613,7 @@
           </address>
         </div>
         <div class="foot-socials-box">
-          <h3 class="foot-socials">Присоединяйтесь</h3>
+          <p class="foot-socials">Присоединяйтесь</p>
           <ul class="foot-socials-list list">
             <li class="foot-socials-item">
               <a
@@ -670,7 +670,7 @@
           </ul>
         </div>
         <div class="footer-form-box">
-          <b class="footer-form-title">Подпишитесь на рассылку</b>
+          <p class="footer-form-title">Подпишитесь на рассылку</p>
           <form class="footer-form">
             <input class="footer-input" type="email" name="user-mail" placeholder="E-mail" />
             <button class="footer-sendbtn" type="submit">
