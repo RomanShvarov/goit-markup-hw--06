@@ -679,9 +679,11 @@ img {
 
 .form-input:focus + .form-icon,
 .form-input:focus,
+.form-input-group:hover > .form-icon,
+.form-input-group:hover > .form-input,
+.form-input-group:focus > .form-icon,
+.form-input-group:focus > .form-input,
 .clients-comment:focus,
-.form-input:hover + .form-icon,
-.form-input:hover,
 .clients-comment:hover {
   border-color: var(--accent-color);
   fill: var(--accent-color);
@@ -715,7 +717,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
 }
 
 .checkbox:checked + .custom-checkbox {
@@ -752,9 +753,7 @@ img {
 } */
 
 .form-policy-group:hover .custom-checkbox,
-.form-policy-group:focus .custom-checkbox,
-.form-policy-group:hover .form-policy-dscr,
-.form-policy-group:focus .form-policy-dscr {
+.form-policy-group:focus .custom-checkbox {
   color: var(--accent-color);
   outline-color: var(--accent-color);
 }
@@ -820,6 +819,7 @@ img {
   width: 200px;
   height: 50px;
 
+  margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
 
